@@ -1,14 +1,17 @@
 <template>
   <h2>{{ raceModel.name }}</h2>
   <p>{{ startInstant }}</p>
-  <ul v-for="pony in raceModel.ponies" :key="pony.id">
-    <li>{{ pony.name }}</li>
-  </ul>
+  <div class="row">
+    <div class="col" v-for="pony in raceModel.ponies" :key="pony.id">
+      <Pony :ponyModel="pony" />
+    </div>
+  </div>
 </template>
 
 <script lang="ts" setup>
 import { computed } from "vue";
 import fromNow from '@/utils/FromNow';
+import Pony from "@/components/Pony.vue"
 
 const props = defineProps(["raceModel"]);
 
