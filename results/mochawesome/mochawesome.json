@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2023-04-26T11:28:36.164Z",
-    "end": "2023-04-26T11:28:54.054Z",
-    "duration": 17890,
+    "start": "2023-04-26T12:08:41.397Z",
+    "end": "2023-04-26T12:08:59.563Z",
+    "duration": 18166,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "eb471d62-a146-4829-8e88-00be806b36fa",
+      "uuid": "b79a1128-184e-4f52-8cbe-c35a4aae9d3b",
       "title": "",
       "fullFile": "cypress/e2e/example.cy.ts",
       "file": "cypress/e2e/example.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "1a030a9e-01c5-4ef9-b881-a5932e2b8f67",
+          "uuid": "4546b4b4-8778-4fa5-b426-3a1ad25f574d",
           "title": "My First Test",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "visits the app root url",
               "fullTitle": "My First Test visits the app root url",
               "timedOut": null,
-              "duration": 4388,
+              "duration": 4415,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'You did it!' within the selector: 'h1' but never did.\n    at Context.eval (webpack:///./cypress/e2e/example.cy.ts:6:7)",
                 "diff": null
               },
-              "uuid": "93c10210-adc5-441e-b0f3-8a4fe80ede58",
-              "parentUUID": "1a030a9e-01c5-4ef9-b881-a5932e2b8f67",
+              "uuid": "4ff32611-22d2-4479-b54e-9b3596c77ef8",
+              "parentUUID": "4546b4b4-8778-4fa5-b426-3a1ad25f574d",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "93c10210-adc5-441e-b0f3-8a4fe80ede58"
+            "4ff32611-22d2-4479-b54e-9b3596c77ef8"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 4388,
+          "duration": 4415,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

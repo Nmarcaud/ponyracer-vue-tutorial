@@ -1,15 +1,15 @@
 {
   "stats": {
     "suites": 2,
-    "tests": 2,
-    "passes": 1,
+    "tests": 4,
+    "passes": 3,
     "pending": 0,
     "failures": 1,
-    "start": "2023-04-26T11:28:36.164Z",
-    "end": "2023-04-26T11:28:56.713Z",
-    "duration": 4655,
-    "testsRegistered": 2,
-    "passPercent": 50,
+    "start": "2023-04-26T12:08:41.397Z",
+    "end": "2023-04-26T12:09:02.744Z",
+    "duration": 5069,
+    "testsRegistered": 4,
+    "passPercent": 75,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "eb471d62-a146-4829-8e88-00be806b36fa",
+      "uuid": "b79a1128-184e-4f52-8cbe-c35a4aae9d3b",
       "title": "",
       "fullFile": "cypress/e2e/example.cy.ts",
       "file": "cypress/e2e/example.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "1a030a9e-01c5-4ef9-b881-a5932e2b8f67",
+          "uuid": "4546b4b4-8778-4fa5-b426-3a1ad25f574d",
           "title": "My First Test",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "visits the app root url",
               "fullTitle": "My First Test visits the app root url",
               "timedOut": null,
-              "duration": 4388,
+              "duration": 4415,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'You did it!' within the selector: 'h1' but never did.\n    at Context.eval (webpack:///./cypress/e2e/example.cy.ts:6:7)",
                 "diff": null
               },
-              "uuid": "93c10210-adc5-441e-b0f3-8a4fe80ede58",
-              "parentUUID": "1a030a9e-01c5-4ef9-b881-a5932e2b8f67",
+              "uuid": "4ff32611-22d2-4479-b54e-9b3596c77ef8",
+              "parentUUID": "4546b4b4-8778-4fa5-b426-3a1ad25f574d",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "93c10210-adc5-441e-b0f3-8a4fe80ede58"
+            "4ff32611-22d2-4479-b54e-9b3596c77ef8"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 4388,
+          "duration": 4415,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -80,7 +80,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "733f3369-b4de-482c-9bb1-4fc42f3131c7",
+      "uuid": "7a039761-8fa3-4471-b76d-bb8bd2d756bb",
       "title": "",
       "fullFile": "cypress/e2e/home.cy.ts",
       "file": "cypress/e2e/home.cy.ts",
@@ -89,7 +89,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c45b2165-4102-4999-87a0-98adba0a668b",
+          "uuid": "c362b2f4-f70d-4492-a964-b1ee82fc3f93",
           "title": "Ponyracer",
           "fullFile": "",
           "file": "",
@@ -100,7 +100,7 @@
               "title": "should display title on home page",
               "fullTitle": "Ponyracer should display title on home page",
               "timedOut": null,
-              "duration": 267,
+              "duration": 224,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -109,20 +109,58 @@
               "context": null,
               "code": "cy.visit('/');\ncy.contains('h1', 'Ponyracer');",
               "err": {},
-              "uuid": "0ab2b62c-443b-4611-87fc-f4f6f6b24374",
-              "parentUUID": "c45b2165-4102-4999-87a0-98adba0a668b",
+              "uuid": "41d59737-557d-4f73-8fac-be1641cf3cb8",
+              "parentUUID": "c362b2f4-f70d-4492-a964-b1ee82fc3f93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display a navbar",
+              "fullTitle": "Ponyracer should display a navbar",
+              "timedOut": null,
+              "duration": 126,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.contains(navbarBrand, 'PonyRacer');\ncy.contains(navbarLink, 'Races');",
+              "err": {},
+              "uuid": "6c3d72aa-e460-41c3-8065-dfea8bd751cf",
+              "parentUUID": "c362b2f4-f70d-4492-a964-b1ee82fc3f93",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display a navbar collapsed on small screen",
+              "fullTitle": "Ponyracer should display a navbar collapsed on small screen",
+              "timedOut": null,
+              "duration": 304,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport('iphone-6+');\ncy.visit('/');\ncy.contains(navbarBrand, 'PonyRacer');\ncy.get(navbarLink).should('not.be.visible');\n// toggle the navbar\ncy.get('.navbar-toggler').click();\ncy.get(navbarLink).should('be.visible');",
+              "err": {},
+              "uuid": "db25089b-7f2c-4202-a9a9-ee8fc2365221",
+              "parentUUID": "c362b2f4-f70d-4492-a964-b1ee82fc3f93",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "0ab2b62c-443b-4611-87fc-f4f6f6b24374"
+            "41d59737-557d-4f73-8fac-be1641cf3cb8",
+            "6c3d72aa-e460-41c3-8065-dfea8bd751cf",
+            "db25089b-7f2c-4202-a9a9-ee8fc2365221"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 267,
+          "duration": 654,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
