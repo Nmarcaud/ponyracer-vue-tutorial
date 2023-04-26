@@ -1,14 +1,14 @@
 {
-  "numTotalTestSuites": 8,
-  "numPassedTestSuites": 8,
+  "numTotalTestSuites": 10,
+  "numPassedTestSuites": 10,
   "numFailedTestSuites": 0,
   "numPendingTestSuites": 0,
-  "numTotalTests": 6,
-  "numPassedTests": 6,
+  "numTotalTests": 7,
+  "numPassedTests": 7,
   "numFailedTests": 0,
   "numPendingTests": 0,
   "numTodoTests": 0,
-  "startTime": 1682513826176,
+  "startTime": 1682515861087,
   "success": true,
   "testResults": [
     {
@@ -21,15 +21,35 @@
           "fullName": " Navbar.vue should toggle the class on click",
           "status": "passed",
           "title": "should toggle the class on click",
-          "duration": 89,
+          "duration": 84,
           "failureMessages": []
         }
       ],
-      "startTime": 1682513830392,
-      "endTime": 1682513830481,
+      "startTime": 1682515865441,
+      "endTime": 1682515865525,
       "status": "passed",
       "message": "",
       "name": "/home/nicolasm/Bureau/ponyracer/src/components/__tests__/Navbar.spec.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "",
+            "FromNow"
+          ],
+          "fullName": " FromNow should transform a date",
+          "status": "passed",
+          "title": "should transform a date",
+          "duration": 6,
+          "failureMessages": []
+        }
+      ],
+      "startTime": 1682515865619,
+      "endTime": 1682515865625,
+      "status": "passed",
+      "message": "",
+      "name": "/home/nicolasm/Bureau/ponyracer/src/utils/__tests__/FromNow.spec.ts"
     },
     {
       "assertionResults": [
@@ -41,12 +61,12 @@
           "fullName": " Races.vue should display every race name in a title",
           "status": "passed",
           "title": "should display every race name in a title",
-          "duration": 35,
+          "duration": 68,
           "failureMessages": []
         }
       ],
-      "startTime": 1682513830499,
-      "endTime": 1682513830534,
+      "startTime": 1682515865726,
+      "endTime": 1682515865794,
       "status": "passed",
       "message": "",
       "name": "/home/nicolasm/Bureau/ponyracer/src/views/__tests__/Races.spec.ts"
@@ -61,12 +81,12 @@
           "fullName": " Race.vue should display a race name and its ponies",
           "status": "passed",
           "title": "should display a race name and its ponies",
-          "duration": 85,
+          "duration": 45,
           "failureMessages": []
         }
       ],
-      "startTime": 1682513830714,
-      "endTime": 1682513830799,
+      "startTime": 1682515865732,
+      "endTime": 1682515865777,
       "status": "passed",
       "message": "",
       "name": "/home/nicolasm/Bureau/ponyracer/src/components/__tests__/Race.spec.ts"
@@ -81,7 +101,7 @@
           "fullName": " App.vue renders a title",
           "status": "passed",
           "title": "renders a title",
-          "duration": 35,
+          "duration": 36,
           "failureMessages": []
         },
         {
@@ -92,7 +112,7 @@
           "fullName": " App.vue renders the navbar",
           "status": "passed",
           "title": "renders the navbar",
-          "duration": 17,
+          "duration": 79,
           "failureMessages": []
         },
         {
@@ -103,12 +123,12 @@
           "fullName": " App.vue renders the races list",
           "status": "passed",
           "title": "renders the races list",
-          "duration": 79,
+          "duration": 16,
           "failureMessages": []
         }
       ],
-      "startTime": 1682513830758,
-      "endTime": 1682513830889,
+      "startTime": 1682515865836,
+      "endTime": 1682515865967,
       "status": "passed",
       "message": "",
       "name": "/home/nicolasm/Bureau/ponyracer/src/__tests__/App.spec.ts"
