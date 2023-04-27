@@ -2,6 +2,17 @@
   <div v-for="race in races" :key="race.id">
     <Race :raceModel="race" />
   </div>
+  <div 
+    v-if="error"
+    class="alert alert-danger d-flex justify-content-between"
+  >
+    An error occurred while loading.
+    <button 
+      @click="error = false"
+      type="button" 
+      class="btn-close" 
+      aria-label="Close"></button>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -18,9 +29,14 @@ import { useRaceService } from "@/composables/RaceService";
 const raceService = useRaceService();
 
 const races = ref();
+const error= ref(false);
 
 onMounted(async() => {
-  races.value = await raceService.list()
+  try {
+    races.value = await raceService.list();
+  } catch (e) {
+    error.value = true
+  }
 })
 
 </script>

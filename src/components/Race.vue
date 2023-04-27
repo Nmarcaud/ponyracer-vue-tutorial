@@ -2,7 +2,7 @@
   <h2>{{ raceModel.name }}</h2>
   <p>{{ startInstant }}</p>
   <div class="row">
-    <div class="col" v-for="pony in raceModel.ponies" :key="pony.id">
+    <div class="col-6 col-md-4 col-lg-2 d-flex" v-for="pony in raceModel.ponies" :key="pony.id">
       <Pony :ponyModel="pony" />
     </div>
   </div>

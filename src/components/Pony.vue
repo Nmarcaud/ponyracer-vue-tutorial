@@ -1,7 +1,7 @@
 <template>
-  <figure @click="clicked()">
-    <img :src="ponyImageUrl" :alt="ponyModel.name"/>
-    <figcaption>{{ ponyModel.name }}</figcaption>
+  <figure class="card card-body p-4 border-0 shadow" @click="clicked()">
+    <img class="img-fluid" :src="ponyImageUrl" :alt="ponyModel.name"/>
+    <figcaption class="text-center mt-3">{{ ponyModel.name }}</figcaption>
   </figure>
 </template>
 
