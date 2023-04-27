@@ -1,4 +1,4 @@
-import RaceModel from "@/models/RaceModel";
+import RaceModel from '@/models/RaceModel';
 import axios from "axios";
 
 export function useRaceService() {

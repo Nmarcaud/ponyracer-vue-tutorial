@@ -2,6 +2,11 @@
   <div v-for="race in races" :key="race.id">
     <Race :raceModel="race" />
   </div>
+
+  <Alert v-if="error" dissmissible="true" variant="danger" @dismissed="error = false">
+    coucou
+  </Alert>
+  <!--
   <div 
     v-if="error"
     class="alert alert-danger d-flex justify-content-between"
@@ -13,6 +18,7 @@
       class="btn-close" 
       aria-label="Close"></button>
   </div>
+  -->
 </template>
 
 <script lang="ts" setup>
